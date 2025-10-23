@@ -1,0 +1,1676 @@
+{
+    "success": true,
+    "message": "Success",
+    "data": [
+        {
+            "route_id": "PYL",
+            "agency_id": "rapidrail",
+            "route_short_name": "PYL",
+            "route_long_name": "MRT Putrajaya Line",
+            "route_desc": "Putrajaya ~ Kwasa Damansara",
+            "route_type": 1,
+            "route_color": "FFCD00",
+            "route_text_color": "FFFFFF",
+            "category": "MRT",
+            "status": "valid",
+            "stops": [
+                {
+                    "stop_id": "PY01",
+                    "stop_name": "KWASA DAMANSARA",
+                    "stop_lat": "3.1763324",
+                    "stop_lon": "101.5721456",
+                    "category": "MRT",
+                    "route_id": "PYL",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            101.5721456,
+                            3.1763324
+                        ]
+                    },
+                    "isOKU": "true",
+                    "status": "valid",
+                    "search": "MRT KWASA DAMANSARA",
+                    "trip_list": [
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 0,
+                            "headsign": "From Kwasa Damansara to Putrajaya",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 1
+                        },
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 1,
+                            "headsign": "From Putrajaya to Kwasa Damansara",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 36
+                        }
+                    ]
+                },
+                {
+                    "stop_id": "PY03",
+                    "stop_name": "KAMPUNG SELAMAT",
+                    "stop_lat": "3.197266",
+                    "stop_lon": "101.578499",
+                    "category": "MRT",
+                    "route_id": "PYL",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            101.578499,
+                            3.197266
+                        ]
+                    },
+                    "isOKU": "true",
+                    "status": "valid",
+                    "search": "MRT KAMPUNG SELAMAT",
+                    "trip_list": [
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 0,
+                            "headsign": "From Kwasa Damansara to Putrajaya",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 2
+                        },
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 1,
+                            "headsign": "From Putrajaya to Kwasa Damansara",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 35
+                        }
+                    ]
+                },
+                {
+                    "stop_id": "PY04",
+                    "stop_name": "SUNGAI BULOH",
+                    "stop_lat": "3.206429",
+                    "stop_lon": "101.581779",
+                    "category": "MRT",
+                    "route_id": "PYL",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            101.581779,
+                            3.206429
+                        ]
+                    },
+                    "isOKU": "true",
+                    "status": "valid",
+                    "search": "MRT SUNGAI BULOH",
+                    "trip_list": [
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 0,
+                            "headsign": "From Kwasa Damansara to Putrajaya",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 3
+                        },
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 1,
+                            "headsign": "From Putrajaya to Kwasa Damansara",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 34
+                        }
+                    ]
+                },
+                {
+                    "stop_id": "PY05",
+                    "stop_name": "DAMANSARA DAMAI",
+                    "stop_lat": "3.199892",
+                    "stop_lon": "101.592623",
+                    "category": "MRT",
+                    "route_id": "PYL",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            101.592623,
+                            3.199892
+                        ]
+                    },
+                    "isOKU": "true",
+                    "status": "valid",
+                    "search": "MRT DAMANSARA DAMAI",
+                    "trip_list": [
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 0,
+                            "headsign": "From Kwasa Damansara to Putrajaya",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 4
+                        },
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 1,
+                            "headsign": "From Putrajaya to Kwasa Damansara",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 33
+                        }
+                    ]
+                },
+                {
+                    "stop_id": "PY06",
+                    "stop_name": "SRI DAMANSARA BARAT",
+                    "stop_lat": "3.198197",
+                    "stop_lon": "101.608302",
+                    "category": "MRT",
+                    "route_id": "PYL",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            101.608302,
+                            3.198197
+                        ]
+                    },
+                    "isOKU": "true",
+                    "status": "valid",
+                    "search": "MRT SRI DAMANSARA BARAT",
+                    "trip_list": [
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 0,
+                            "headsign": "From Kwasa Damansara to Putrajaya",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 5
+                        },
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 1,
+                            "headsign": "From Putrajaya to Kwasa Damansara",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 32
+                        }
+                    ]
+                },
+                {
+                    "stop_id": "PY07",
+                    "stop_name": "SRI DAMANSARA SENTRAL",
+                    "stop_lat": "3.198815",
+                    "stop_lon": "101.621396",
+                    "category": "MRT",
+                    "route_id": "PYL",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            101.621396,
+                            3.198815
+                        ]
+                    },
+                    "isOKU": "true",
+                    "status": "valid",
+                    "search": "MRT SRI DAMANSARA SENTRAL",
+                    "trip_list": [
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 0,
+                            "headsign": "From Kwasa Damansara to Putrajaya",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 6
+                        },
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 1,
+                            "headsign": "From Putrajaya to Kwasa Damansara",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 31
+                        }
+                    ]
+                },
+                {
+                    "stop_id": "PY08",
+                    "stop_name": "SRI DAMANSARA TIMUR",
+                    "stop_lat": "3.207832",
+                    "stop_lon": "101.628716",
+                    "category": "MRT",
+                    "route_id": "PYL",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            101.628716,
+                            3.207832
+                        ]
+                    },
+                    "isOKU": "true",
+                    "status": "valid",
+                    "search": "MRT SRI DAMANSARA TIMUR",
+                    "trip_list": [
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 0,
+                            "headsign": "From Kwasa Damansara to Putrajaya",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 7
+                        },
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 1,
+                            "headsign": "From Putrajaya to Kwasa Damansara",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 30
+                        }
+                    ]
+                },
+                {
+                    "stop_id": "PY09",
+                    "stop_name": "METRO PRIMA",
+                    "stop_lat": "3.214438",
+                    "stop_lon": "101.639402",
+                    "category": "MRT",
+                    "route_id": "PYL",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            101.639402,
+                            3.214438
+                        ]
+                    },
+                    "isOKU": "true",
+                    "status": "valid",
+                    "search": "MRT METRO PRIMA",
+                    "trip_list": [
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 0,
+                            "headsign": "From Kwasa Damansara to Putrajaya",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 8
+                        },
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 1,
+                            "headsign": "From Putrajaya to Kwasa Damansara",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 29
+                        }
+                    ]
+                },
+                {
+                    "stop_id": "PY10",
+                    "stop_name": "KEPONG BARU",
+                    "stop_lat": "3.211663",
+                    "stop_lon": "101.648193",
+                    "category": "MRT",
+                    "route_id": "PYL",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            101.648193,
+                            3.211663
+                        ]
+                    },
+                    "isOKU": "true",
+                    "status": "valid",
+                    "search": "MRT KEPONG BARU",
+                    "trip_list": [
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 0,
+                            "headsign": "From Kwasa Damansara to Putrajaya",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 9
+                        },
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 1,
+                            "headsign": "From Putrajaya to Kwasa Damansara",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 28
+                        }
+                    ]
+                },
+                {
+                    "stop_id": "PY11",
+                    "stop_name": "JINJANG",
+                    "stop_lat": "3.209544",
+                    "stop_lon": "101.655829",
+                    "category": "MRT",
+                    "route_id": "PYL",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            101.655829,
+                            3.209544
+                        ]
+                    },
+                    "isOKU": "true",
+                    "status": "valid",
+                    "search": "MRT JINJANG",
+                    "trip_list": [
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 0,
+                            "headsign": "From Kwasa Damansara to Putrajaya",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 10
+                        },
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 1,
+                            "headsign": "From Putrajaya to Kwasa Damansara",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 27
+                        }
+                    ]
+                },
+                {
+                    "stop_id": "PY12",
+                    "stop_name": "SRI DELIMA",
+                    "stop_lat": "3.207108",
+                    "stop_lon": "101.665749",
+                    "category": "MRT",
+                    "route_id": "PYL",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            101.665749,
+                            3.207108
+                        ]
+                    },
+                    "isOKU": "true",
+                    "status": "valid",
+                    "search": "MRT SRI DELIMA",
+                    "trip_list": [
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 0,
+                            "headsign": "From Kwasa Damansara to Putrajaya",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 11
+                        },
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 1,
+                            "headsign": "From Putrajaya to Kwasa Damansara",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 26
+                        }
+                    ]
+                },
+                {
+                    "stop_id": "PY13",
+                    "stop_name": "KAMPUNG BATU",
+                    "stop_lat": "3.205521",
+                    "stop_lon": "101.675473",
+                    "category": "MRT",
+                    "route_id": "PYL",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            101.675473,
+                            3.205521
+                        ]
+                    },
+                    "isOKU": "true",
+                    "status": "valid",
+                    "search": "MRT KAMPUNG BATU",
+                    "trip_list": [
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 0,
+                            "headsign": "From Kwasa Damansara to Putrajaya",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 12
+                        },
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 1,
+                            "headsign": "From Putrajaya to Kwasa Damansara",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 25
+                        }
+                    ]
+                },
+                {
+                    "stop_id": "PY14",
+                    "stop_name": "KENTOMEN",
+                    "stop_lat": "3.19563",
+                    "stop_lon": "101.6797",
+                    "category": "MRT",
+                    "route_id": "PYL",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            101.6797,
+                            3.19563
+                        ]
+                    },
+                    "isOKU": "true",
+                    "status": "valid",
+                    "search": "MRT KENTOMEN",
+                    "trip_list": [
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 0,
+                            "headsign": "From Kwasa Damansara to Putrajaya",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 13
+                        },
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 1,
+                            "headsign": "From Putrajaya to Kwasa Damansara",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 24
+                        }
+                    ]
+                },
+                {
+                    "stop_id": "PY15",
+                    "stop_name": "JALAN IPOH",
+                    "stop_lat": "3.189319",
+                    "stop_lon": "101.681145",
+                    "category": "MRT",
+                    "route_id": "PYL",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            101.681145,
+                            3.189319
+                        ]
+                    },
+                    "isOKU": "true",
+                    "status": "valid",
+                    "search": "MRT JALAN IPOH",
+                    "trip_list": [
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 0,
+                            "headsign": "From Kwasa Damansara to Putrajaya",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 14
+                        },
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 1,
+                            "headsign": "From Putrajaya to Kwasa Damansara",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 23
+                        }
+                    ]
+                },
+                {
+                    "stop_id": "PY16",
+                    "stop_name": "SENTUL BARAT",
+                    "stop_lat": "3.179369",
+                    "stop_lon": "101.684742",
+                    "category": "MRT",
+                    "route_id": "PYL",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            101.684742,
+                            3.179369
+                        ]
+                    },
+                    "isOKU": "true",
+                    "status": "valid",
+                    "search": "MRT SENTUL BARAT",
+                    "trip_list": [
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 0,
+                            "headsign": "From Kwasa Damansara to Putrajaya",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 15
+                        },
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 1,
+                            "headsign": "From Putrajaya to Kwasa Damansara",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 22
+                        }
+                    ]
+                },
+                {
+                    "stop_id": "PY17",
+                    "stop_name": "TITIWANGSA",
+                    "stop_lat": "3.17408",
+                    "stop_lon": "101.69581",
+                    "category": "MRT",
+                    "route_id": "PYL",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            101.69581,
+                            3.17408
+                        ]
+                    },
+                    "isOKU": "true",
+                    "status": "valid",
+                    "search": "MRT TITIWANGSA",
+                    "trip_list": [
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 0,
+                            "headsign": "From Kwasa Damansara to Putrajaya",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 16
+                        },
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 1,
+                            "headsign": "From Putrajaya to Kwasa Damansara",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 21
+                        }
+                    ]
+                },
+                {
+                    "stop_id": "PY18",
+                    "stop_name": "HOSPITAL KUALA LUMPUR",
+                    "stop_lat": "3.17405",
+                    "stop_lon": "101.70239",
+                    "category": "MRT",
+                    "route_id": "PYL",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            101.70239,
+                            3.17405
+                        ]
+                    },
+                    "isOKU": "true",
+                    "status": "valid",
+                    "search": "MRT HOSPITAL KUALA LUMPUR",
+                    "trip_list": [
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 0,
+                            "headsign": "From Kwasa Damansara to Putrajaya",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 17
+                        },
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 1,
+                            "headsign": "From Putrajaya to Kwasa Damansara",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 20
+                        }
+                    ]
+                },
+                {
+                    "stop_id": "PY19",
+                    "stop_name": "RAJA UDA",
+                    "stop_lat": "3.16794",
+                    "stop_lon": "101.71017",
+                    "category": "MRT",
+                    "route_id": "PYL",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            101.71017,
+                            3.16794
+                        ]
+                    },
+                    "isOKU": "true",
+                    "status": "valid",
+                    "search": "MRT RAJA UDA",
+                    "trip_list": [
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 0,
+                            "headsign": "From Kwasa Damansara to Putrajaya",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 18
+                        },
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 1,
+                            "headsign": "From Putrajaya to Kwasa Damansara",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 19
+                        }
+                    ]
+                },
+                {
+                    "stop_id": "PY20",
+                    "stop_name": "AMPANG PARK",
+                    "stop_lat": "3.16225",
+                    "stop_lon": "101.71781",
+                    "category": "MRT",
+                    "route_id": "PYL",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            101.71781,
+                            3.16225
+                        ]
+                    },
+                    "isOKU": "true",
+                    "status": "valid",
+                    "search": "MRT AMPANG PARK",
+                    "trip_list": [
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 0,
+                            "headsign": "From Kwasa Damansara to Putrajaya",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 19
+                        },
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 1,
+                            "headsign": "From Putrajaya to Kwasa Damansara",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 18
+                        }
+                    ]
+                },
+                {
+                    "stop_id": "PY21",
+                    "stop_name": "PERSIARAN KLCC",
+                    "stop_lat": "3.15712",
+                    "stop_lon": "101.71834",
+                    "category": "MRT",
+                    "route_id": "PYL",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            101.71834,
+                            3.15712
+                        ]
+                    },
+                    "isOKU": "true",
+                    "status": "valid",
+                    "search": "MRT PERSIARAN KLCC",
+                    "trip_list": [
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 0,
+                            "headsign": "From Kwasa Damansara to Putrajaya",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 20
+                        },
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 1,
+                            "headsign": "From Putrajaya to Kwasa Damansara",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 17
+                        }
+                    ]
+                },
+                {
+                    "stop_id": "PY22",
+                    "stop_name": "CONLAY",
+                    "stop_lat": "3.15145",
+                    "stop_lon": "101.71801",
+                    "category": "MRT",
+                    "route_id": "PYL",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            101.71801,
+                            3.15145
+                        ]
+                    },
+                    "isOKU": "true",
+                    "status": "valid",
+                    "search": "MRT CONLAY",
+                    "trip_list": [
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 0,
+                            "headsign": "From Kwasa Damansara to Putrajaya",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 21
+                        },
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 1,
+                            "headsign": "From Putrajaya to Kwasa Damansara",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 16
+                        }
+                    ]
+                },
+                {
+                    "stop_id": "PY23",
+                    "stop_name": "TUN RAZAK EXCHANGE",
+                    "stop_lat": "3.14289",
+                    "stop_lon": "101.72034",
+                    "category": "MRT",
+                    "route_id": "PYL",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            101.72034,
+                            3.14289
+                        ]
+                    },
+                    "isOKU": "true",
+                    "status": "valid",
+                    "search": "MRT TUN RAZAK EXCHANGE",
+                    "trip_list": [
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 0,
+                            "headsign": "From Kwasa Damansara to Putrajaya",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 22
+                        },
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 1,
+                            "headsign": "From Putrajaya to Kwasa Damansara",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 15
+                        }
+                    ]
+                },
+                {
+                    "stop_id": "PY24",
+                    "stop_name": "CHAN SOW LIN",
+                    "stop_lat": "3.12839",
+                    "stop_lon": "101.71663",
+                    "category": "MRT",
+                    "route_id": "PYL",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            101.71663,
+                            3.12839
+                        ]
+                    },
+                    "isOKU": "true",
+                    "status": "valid",
+                    "search": "MRT CHAN SOW LIN",
+                    "trip_list": [
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 0,
+                            "headsign": "From Kwasa Damansara to Putrajaya",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 23
+                        },
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 1,
+                            "headsign": "From Putrajaya to Kwasa Damansara",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 14
+                        }
+                    ]
+                },
+                {
+                    "stop_id": "PY27",
+                    "stop_name": "KUCHAI",
+                    "stop_lat": "3.089546",
+                    "stop_lon": "101.694124",
+                    "category": "MRT",
+                    "route_id": "PYL",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            101.694124,
+                            3.089546
+                        ]
+                    },
+                    "isOKU": "true",
+                    "status": "valid",
+                    "search": "MRT KUCHAI",
+                    "trip_list": [
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 0,
+                            "headsign": "From Kwasa Damansara to Putrajaya",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 24
+                        },
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 1,
+                            "headsign": "From Putrajaya to Kwasa Damansara",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 13
+                        }
+                    ]
+                },
+                {
+                    "stop_id": "PY28",
+                    "stop_name": "TAMAN NAGA EMAS",
+                    "stop_lat": "3.077688",
+                    "stop_lon": "101.699867",
+                    "category": "MRT",
+                    "route_id": "PYL",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            101.699867,
+                            3.077688
+                        ]
+                    },
+                    "isOKU": "true",
+                    "status": "valid",
+                    "search": "MRT TAMAN NAGA EMAS",
+                    "trip_list": [
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 0,
+                            "headsign": "From Kwasa Damansara to Putrajaya",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 25
+                        },
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 1,
+                            "headsign": "From Putrajaya to Kwasa Damansara",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 12
+                        }
+                    ]
+                },
+                {
+                    "stop_id": "PY29",
+                    "stop_name": "SUNGAI BESI",
+                    "stop_lat": "3.063737",
+                    "stop_lon": "101.7084",
+                    "category": "MRT",
+                    "route_id": "PYL",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            101.7084,
+                            3.063737
+                        ]
+                    },
+                    "isOKU": "true",
+                    "status": "valid",
+                    "search": "MRT SUNGAI BESI",
+                    "trip_list": [
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 0,
+                            "headsign": "From Kwasa Damansara to Putrajaya",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 26
+                        },
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 1,
+                            "headsign": "From Putrajaya to Kwasa Damansara",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 11
+                        }
+                    ]
+                },
+                {
+                    "stop_id": "PY31",
+                    "stop_name": "SERDANG RAYA UTARA",
+                    "stop_lat": "3.041674",
+                    "stop_lon": "101.704928",
+                    "category": "MRT",
+                    "route_id": "PYL",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            101.704928,
+                            3.041674
+                        ]
+                    },
+                    "isOKU": "true",
+                    "status": "valid",
+                    "search": "MRT SERDANG RAYA UTARA",
+                    "trip_list": [
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 0,
+                            "headsign": "From Kwasa Damansara to Putrajaya",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 27
+                        },
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 1,
+                            "headsign": "From Putrajaya to Kwasa Damansara",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 10
+                        }
+                    ]
+                },
+                {
+                    "stop_id": "PY32",
+                    "stop_name": "SERDANG RAYA SELATAN",
+                    "stop_lat": "3.028463",
+                    "stop_lon": "101.707514",
+                    "category": "MRT",
+                    "route_id": "PYL",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            101.707514,
+                            3.028463
+                        ]
+                    },
+                    "isOKU": "true",
+                    "status": "valid",
+                    "search": "MRT SERDANG RAYA SELATAN",
+                    "trip_list": [
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 0,
+                            "headsign": "From Kwasa Damansara to Putrajaya",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 28
+                        },
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 1,
+                            "headsign": "From Putrajaya to Kwasa Damansara",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 9
+                        }
+                    ]
+                },
+                {
+                    "stop_id": "PY33",
+                    "stop_name": "SERDANG JAYA",
+                    "stop_lat": "3.0216",
+                    "stop_lon": "101.709",
+                    "category": "MRT",
+                    "route_id": "PYL",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            101.709,
+                            3.0216
+                        ]
+                    },
+                    "isOKU": "true",
+                    "status": "valid",
+                    "search": "MRT SERDANG JAYA",
+                    "trip_list": [
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 0,
+                            "headsign": "From Kwasa Damansara to Putrajaya",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 29
+                        },
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 1,
+                            "headsign": "From Putrajaya to Kwasa Damansara",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 8
+                        }
+                    ]
+                },
+                {
+                    "stop_id": "PY34",
+                    "stop_name": "UPM",
+                    "stop_lat": "3.008489",
+                    "stop_lon": "101.705396",
+                    "category": "MRT",
+                    "route_id": "PYL",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            101.705396,
+                            3.008489
+                        ]
+                    },
+                    "isOKU": "true",
+                    "status": "valid",
+                    "search": "MRT UPM",
+                    "trip_list": [
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 0,
+                            "headsign": "From Kwasa Damansara to Putrajaya",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 30
+                        },
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 1,
+                            "headsign": "From Putrajaya to Kwasa Damansara",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 7
+                        }
+                    ]
+                },
+                {
+                    "stop_id": "PY36",
+                    "stop_name": "TAMAN EQUINE",
+                    "stop_lat": "2.98942",
+                    "stop_lon": "101.67244",
+                    "category": "MRT",
+                    "route_id": "PYL",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            101.67244,
+                            2.98942
+                        ]
+                    },
+                    "isOKU": "true",
+                    "status": "valid",
+                    "search": "MRT TAMAN EQUINE",
+                    "trip_list": [
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 0,
+                            "headsign": "From Kwasa Damansara to Putrajaya",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 31
+                        },
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 1,
+                            "headsign": "From Putrajaya to Kwasa Damansara",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 6
+                        }
+                    ]
+                },
+                {
+                    "stop_id": "PY37",
+                    "stop_name": "PUTRA PERMAI",
+                    "stop_lat": "2.98339",
+                    "stop_lon": "101.66099",
+                    "category": "MRT",
+                    "route_id": "PYL",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            101.66099,
+                            2.98339
+                        ]
+                    },
+                    "isOKU": "true",
+                    "status": "valid",
+                    "search": "MRT PUTRA PERMAI",
+                    "trip_list": [
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 0,
+                            "headsign": "From Kwasa Damansara to Putrajaya",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 32
+                        },
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 1,
+                            "headsign": "From Putrajaya to Kwasa Damansara",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 5
+                        }
+                    ]
+                },
+                {
+                    "stop_id": "PY38",
+                    "stop_name": "16 SIERRA",
+                    "stop_lat": "2.964974",
+                    "stop_lon": "101.654812",
+                    "category": "MRT",
+                    "route_id": "PYL",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            101.654812,
+                            2.964974
+                        ]
+                    },
+                    "isOKU": "true",
+                    "status": "valid",
+                    "search": "MRT 16 SIERRA",
+                    "trip_list": [
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 0,
+                            "headsign": "From Kwasa Damansara to Putrajaya",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 33
+                        },
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 1,
+                            "headsign": "From Putrajaya to Kwasa Damansara",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 4
+                        }
+                    ]
+                },
+                {
+                    "stop_id": "PY39",
+                    "stop_name": "CYBERJAYA UTARA",
+                    "stop_lat": "2.95",
+                    "stop_lon": "101.6573",
+                    "category": "MRT",
+                    "route_id": "PYL",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            101.6573,
+                            2.95
+                        ]
+                    },
+                    "isOKU": "true",
+                    "status": "valid",
+                    "search": "MRT CYBERJAYA UTARA",
+                    "trip_list": [
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 0,
+                            "headsign": "From Kwasa Damansara to Putrajaya",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 34
+                        },
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 1,
+                            "headsign": "From Putrajaya to Kwasa Damansara",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 3
+                        }
+                    ]
+                },
+                {
+                    "stop_id": "PY40",
+                    "stop_name": "CYBERJAYA CITY CENTRE",
+                    "stop_lat": "2.9384",
+                    "stop_lon": "101.6659",
+                    "category": "MRT",
+                    "route_id": "PYL",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            101.6659,
+                            2.9384
+                        ]
+                    },
+                    "isOKU": "true",
+                    "status": "valid",
+                    "search": "MRT CYBERJAYA CITY CENTRE",
+                    "trip_list": [
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 0,
+                            "headsign": "From Kwasa Damansara to Putrajaya",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 35
+                        },
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 1,
+                            "headsign": "From Putrajaya to Kwasa Damansara",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 2
+                        }
+                    ]
+                },
+                {
+                    "stop_id": "PY41",
+                    "stop_name": "PUTRAJAYA SENTRAL",
+                    "stop_lat": "2.9313",
+                    "stop_lon": "101.6715",
+                    "category": "MRT",
+                    "route_id": "PYL",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            101.6715,
+                            2.9313
+                        ]
+                    },
+                    "isOKU": "true",
+                    "status": "valid",
+                    "search": "MRT PUTRAJAYA SENTRAL",
+                    "trip_list": [
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 0,
+                            "headsign": "From Kwasa Damansara to Putrajaya",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 36
+                        },
+                        {
+                            "agency": "rapidrail",
+                            "direction_id": 1,
+                            "headsign": "From Putrajaya to Kwasa Damansara",
+                            "route_color": "FFCD00",
+                            "route_desc": "Putrajaya ~ Kwasa Damansara",
+                            "route_id": "PYL",
+                            "route_long_name": "MRT Putrajaya Line",
+                            "route_short_name": "PYL",
+                            "route_type": 1,
+                            "schedules": [],
+                            "stop_sequence": 1
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

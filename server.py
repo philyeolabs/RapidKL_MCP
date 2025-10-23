@@ -1,5 +1,6 @@
 from typing import Any
 import httpx
+import json
 from mcp.server.fastmcp import FastMCP
 
 # Initialize FastMCP server
@@ -65,6 +66,57 @@ async def get_fare(frm: str, to: str) -> str:
     
     except (json.JSONDecodeError, KeyError, TypeError) as e:
         return f"Error processing fare data: {str(e)}"
+
+# Resources - provide all stations info
+@mcp.resource("https://jp.mapit.myrapid.com.my/endpoint/geoservice/stations")
+async def get_all_stations() -> str:
+    """
+    Resource for all stations
+
+    Returns:
+        All the stations categorized by different routes (route_id). Each route
+        will have sets of stations
+    """
+    # Fetch the data explicitly using make_myrapid_request
+    url = f"{MYRAPID_API_BASE}/stations"
+    data = await make_myrapid_request(url)
+
+    # Check if the request was successful and extract data
+    if not data.get('success', False):
+        return f"Error: {data.get('message', 'Failed to fetch stations')}"
+
+    # Initialize output list for formatted text
+    output = []
+
+    # Iterate through each route in the data
+    for route in data.get('data', []):
+        route_id = route.get('route_id', 'Unknown')
+        route_name = route.get('route_long_name', 'Unknown Route')
+        route_category = route.get('category', 'Unknown Category')
+        
+        # Add route header
+        output.append(f"Route: {route_name} ({route_id}, {route_category})")
+        output.append("-" * 50)
+        
+        # Iterate through stops in the route
+        for stop in route.get('stops', []):
+            stop_name = stop.get('stop_name', 'Unknown Stop')
+            stop_id = stop.get('stop_id', 'N/A')
+            is_oku = stop.get('isOKU', 'false').lower() == 'true'
+            stop_lat = stop.get('stop_lat', 'N/A')
+            stop_lon = stop.get('stop_lon', 'N/A')
+            
+            # Format stop details
+            oku_status = "Accessible" if is_oku else "Not Accessible"
+            output.append(f"  Stop: {stop_name} (ID: {stop_id})")
+            output.append(f"    Coordinates: ({stop_lat}, {stop_lon})")
+            output.append(f"    Accessibility: {oku_status}")
+            output.append("")  # Blank line for readability
+        
+        output.append("")  # Blank line between routes
+
+    # Join the output lines into a single string
+    return "\n".join(output)
 
 if __name__ == "__main__":
     # Initialize and run the server
