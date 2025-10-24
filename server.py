@@ -126,7 +126,7 @@ async def get_stations(input: str) -> str:
             
             # Ensure coordinates are valid
             try:
-                lat, lon = float(coordinates[0]), float(coordinates[1])
+                lon, lat = float(coordinates[0]), float(coordinates[1])
                 coord_str = f"({lat:.6f}, {lon:.6f})"
             except (ValueError, TypeError, IndexError):
                 logger.warning(f"Invalid coordinates for station {name}: {coordinates}")
@@ -137,6 +137,8 @@ async def get_stations(input: str) -> str:
                 f"Station ID: {station_id}",
                 f"Category: {category}",
                 f"Coordinates: {coord_str}",
+                f"Latitude : {lat}",
+                f"Longitude: {lon}",
                 ""  # Blank line between stations
             ])
 
