@@ -77,46 +77,77 @@ async def get_all_stations() -> str:
         All the stations categorized by different routes (route_id). Each route
         will have sets of stations
     """
-    # Fetch the data explicitly using make_myrapid_request
     url = f"{MYRAPID_API_BASE}/stations"
-    data = await make_myrapid_request(url)
+    raw = await make_myrapid_request(url)
 
-    # Check if the request was successful and extract data
-    if not data.get('success', False):
+    if not raw:
+        return "Error: Unable to fetch stations data."
+
+    # Accept either a dict (usual case) or a JSON string
+    try:
+        data = json.loads(raw) if isinstance(raw, str) else raw
+    except json.JSONDecodeError:
+        return "Error: Received invalid JSON from stations endpoint."
+
+    if not isinstance(data, dict):
+        return "Error: Unexpected response format from stations endpoint."
+
+    if not data.get("success", False):
         return f"Error: {data.get('message', 'Failed to fetch stations')}"
 
-    # Initialize output list for formatted text
-    output = []
+    routes = data.get("data", []) or []
+    if not routes:
+        return "No routes found."
 
-    # Iterate through each route in the data
-    for route in data.get('data', []):
-        route_id = route.get('route_id', 'Unknown')
-        route_name = route.get('route_long_name', 'Unknown Route')
-        route_category = route.get('category', 'Unknown Category')
-        
-        # Add route header
-        output.append(f"Route: {route_name} ({route_id}, {route_category})")
-        output.append("-" * 50)
-        
-        # Iterate through stops in the route
-        for stop in route.get('stops', []):
-            stop_name = stop.get('stop_name', 'Unknown Stop')
-            stop_id = stop.get('stop_id', 'N/A')
-            is_oku = stop.get('isOKU', 'false').lower() == 'true'
-            stop_lat = stop.get('stop_lat', 'N/A')
-            stop_lon = stop.get('stop_lon', 'N/A')
-            
-            # Format stop details
+    output_lines: list[str] = []
+    for route in routes:
+        route_id = route.get("route_id") or "Unknown"
+        route_name = route.get("route_long_name") or route.get("route_short_name") or "Unknown Route"
+        route_category = route.get("category") or "Unknown Category"
+
+        output_lines.append(f"Route: {route_name} ({route_id}, {route_category})")
+        output_lines.append("-" * 50)
+
+        stops = route.get("stops") or []
+        if not stops:
+            output_lines.append("  No stops available")
+            output_lines.append("")  # blank line between routes
+            continue
+
+        for stop in stops:
+            # skip empty placeholder objects often present in the source JSON
+            if not isinstance(stop, dict) or not stop:
+                continue
+
+            stop_name = stop.get("stop_name") or "Unknown Stop"
+            stop_id = stop.get("stop_id") or "N/A"
+
+            # isOKU may be a string or a boolean
+            is_oku_raw = stop.get("isOKU")
+            if isinstance(is_oku_raw, bool):
+                is_oku = is_oku_raw
+            elif isinstance(is_oku_raw, (int, float)):
+                is_oku = bool(is_oku_raw)
+            else:
+                is_oku = str(is_oku_raw).strip().lower() in {"true", "1", "yes"}
+
+            stop_lat = stop.get("stop_lat") or "N/A"
+            stop_lon = stop.get("stop_lon") or "N/A"
+
+            # additional info: trip_list length if available
+            trip_list = stop.get("trip_list", []) or []
+            trip_count = len(trip_list) if isinstance(trip_list, list) else "N/A"
+
             oku_status = "Accessible" if is_oku else "Not Accessible"
-            output.append(f"  Stop: {stop_name} (ID: {stop_id})")
-            output.append(f"    Coordinates: ({stop_lat}, {stop_lon})")
-            output.append(f"    Accessibility: {oku_status}")
-            output.append("")  # Blank line for readability
-        
-        output.append("")  # Blank line between routes
+            output_lines.append(f"  Stop: {stop_name} (ID: {stop_id})")
+            output_lines.append(f"    Coordinates: ({stop_lat}, {stop_lon})")
+            output_lines.append(f"    Accessibility: {oku_status}")
+            output_lines.append(f"    Trips known: {trip_count}")
+            output_lines.append("")  # blank line between stops
 
-    # Join the output lines into a single string
-    return "\n".join(output)
+        output_lines.append("")  # blank line between routes
+
+    return "\n".join(output_lines)
 
 if __name__ == "__main__":
     # Initialize and run the server
