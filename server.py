@@ -1,6 +1,8 @@
-from typing import Any
+from typing import Optional
 import httpx
 import json
+import logging
+from urllib.parse import quote
 from mcp.server.fastmcp import FastMCP
 
 # Initialize FastMCP server
@@ -9,6 +11,8 @@ mcp = FastMCP("rapidkl")
 # Constants
 MYRAPID_API_BASE = "https://jp.mapit.myrapid.com.my/endpoint/geoservice"
 USER_AGENT = "mcp"
+SCOPE = "WMcentral"
+AGENCY = "rapidkl"
 
 async def make_myrapid_request(url: str) -> dict[str, Any] | None:
     """Make a request to the MYRAPID API with proper error handling."""
@@ -66,6 +70,84 @@ async def get_fare(frm: str, to: str) -> str:
     
     except (json.JSONDecodeError, KeyError, TypeError) as e:
         return f"Error processing fare data: {str(e)}"
+
+
+@mcp.tool()
+async def get_stations(input: str) -> str:
+    """Get station information based on a search input.
+
+    Args:
+        input: The search input which typically can be a place name or a station name e.g. Bandar Utama
+    Returns:
+        str: Formatted string containing station information or error message
+    """
+    # Set up logging
+    logging.basicConfig(level=logging.DEBUG)
+    logger = logging.getLogger(__name__)
+
+    # URL-encode the input string to handle spaces and special characters
+    encoded_input = quote(input.strip(), safe='')
+    #https://jp.mapit.myrapid.com.my/endpoint/geoservice/geocode?scope=WMcentral&agency=rapidkl&input=Bandar%20Utama
+    url = f"{MYRAPID_API_BASE}/geocode?scope={SCOPE}&agency={AGENCY}&input={encoded_input}"
+    
+    try:
+        logger.debug(f"Making request to URL: {url}")
+        raw = await make_myrapid_request(url)
+        
+        if not raw:
+            logger.error("No response received from API")
+            return "Unable to fetch station data for this input."
+
+        logger.debug(f"Raw API response: {raw}")
+
+        # Validate response structure
+        if not isinstance(raw, dict):
+            logger.error(f"Invalid response type: {type(raw)}")
+            return "Error: Invalid response format from API"
+
+        if "results" not in raw:
+            message = raw.get('message', 'No results field in response')
+            logger.error(f"No 'results' in response: {message}")
+            return f"Error: {message}"
+
+        stations = raw.get("results", [])
+        if not stations:
+            logger.info("No stations found in response")
+            return encoded_input + " No stations found matching the input."
+
+        # Format station information
+        station_lines = []
+        for station in stations:
+            # Safely extract station data with defaults
+            name = station.get('poiname', 'N/A')
+            station_id = station.get('poi_id', 'N/A')
+            category = station.get('category', 'N/A')
+            coordinates = station.get('geometry', {}).get('coordinates', ['N/A', 'N/A'])
+            
+            # Ensure coordinates are valid
+            try:
+                lat, lon = float(coordinates[0]), float(coordinates[1])
+                coord_str = f"({lat:.6f}, {lon:.6f})"
+            except (ValueError, TypeError, IndexError):
+                logger.warning(f"Invalid coordinates for station {name}: {coordinates}")
+                coord_str = "(N/A, N/A)"
+
+            station_lines.extend([
+                f"Station Name: {name}",
+                f"Station ID: {station_id}",
+                f"Category: {category}",
+                f"Coordinates: {coord_str}",
+                ""  # Blank line between stations
+            ])
+
+        return "\n".join(station_lines)
+
+    except json.JSONDecodeError as e:
+        logger.error(f"JSON decode error: {str(e)}")
+        return "Error: Invalid JSON response from API"
+    except Exception as e:
+        logger.error(f"Unexpected error: {str(e)}")
+        return f"Error processing station data: {str(e)}" 
 
 # Resources - provide all stations info
 @mcp.resource("https://jp.mapit.myrapid.com.my/endpoint/geoservice/stations")
