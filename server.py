@@ -4,6 +4,7 @@ import json
 import logging
 from urllib.parse import quote
 from mcp.server.fastmcp import FastMCP
+from datetime import datetime
 
 # Initialize FastMCP server
 mcp = FastMCP("rapidkl")
@@ -70,7 +71,6 @@ async def get_fare(frm: str, to: str) -> str:
     
     except (json.JSONDecodeError, KeyError, TypeError) as e:
         return f"Error processing fare data: {str(e)}"
-
 
 @mcp.tool()
 async def get_stations(input: str) -> str:
@@ -150,6 +150,117 @@ async def get_stations(input: str) -> str:
     except Exception as e:
         logger.error(f"Unexpected error: {str(e)}")
         return f"Error processing station data: {str(e)}" 
+
+@mcp.tool()
+async def get_journey_planner(from_long: float, from_lat: float,
+                              to_long: float, to_lat: float, 
+                              mode: str, journey_type: str, departure_datetime: str) -> str:
+    """Get journey plan using journey planner based on coordinates and other parameters.
+
+    Args:
+        from_long: Starting longitude.
+        from_lat: Starting latitude.
+        to_long: Destination longitude.
+        to_lat: Destination latitude.
+        mode: Travel mode (e.g., 'mix', 'transit', 'walking').
+        journey_type: Type of journey (e.g., 'fastest', 'leastchange').
+        departure_datetime: Departure time in 'YYYY-MM-DD HH:MM:SS' or 'YYYY-MM-DD' format.
+    
+    Returns:
+        str: Formatted string containing journey plan.
+    """
+    # Set up logging
+    logging.basicConfig(level=logging.DEBUG)
+    logger = logging.getLogger(__name__)
+
+    try:
+        # Normalize departure datetime
+        try:
+            datetime.strptime(departure_datetime, "%Y-%m-%d %H:%M:%S")
+            newdatetime = departure_datetime  # Already has time, return as is
+        except ValueError:
+            try:
+                datetime.strptime(departure_datetime, "%Y-%m-%d")
+                newdatetime = f"{departure_datetime} 00:00:00"  # Append time
+            except ValueError:
+                logger.error(f"Invalid datetime format: {departure_datetime}")
+                raise ValueError("Input must be in 'YYYY-MM-DD' or 'YYYY-MM-DD HH:MM:SS' format")
+
+        # URL-encode the datetime string
+        encoded_datetime = quote(newdatetime.strip(), safe='')
+
+        # Construct the API URL
+        url = (f"{MYRAPID_API_BASE}/journeyPlanner?agency={AGENCY}&"
+               f"flng={from_long}&flat={from_lat}&tlng={to_long}&tlat={to_lat}&"
+               f"mode={mode}&type={journey_type}&departure_datetime={encoded_datetime}")
+
+        try:
+            logger.debug(f"Making request to URL: {url}")
+            raw = await make_myrapid_request(url)
+            
+            if not raw:
+                logger.error("No response received from API")
+                return "Unable to fetch journey data for this input."
+
+            logger.debug(f"Raw API response: {raw}")
+
+            # Parse the JSON response
+            if isinstance(raw, str):
+                try:
+                    raw = json.loads(raw)
+                except json.JSONDecodeError as e:
+                    logger.error(f"JSON decode error: {str(e)}")
+                    return "Error: Invalid JSON response from API"
+
+            # Check API response status
+            if raw.get("status") != "OK":
+                logger.error(f"API error: {raw.get('message', 'Unknown error')}")
+                return f"Error in response: {raw.get('message', 'Unknown error')}"
+
+            # Parse the journey planner response
+            result = f"Journey from ({from_lat}, {from_long}) to ({to_lat}, {to_long})\n"
+            result += f"Departure: {raw['departure_time']}\n\n"
+
+            for idx, route in enumerate(raw["routes"], 1):
+                result += f"Route {idx}:\n"
+                result += f"  Estimated Arrival: {route['estimated_arrival_time']}\n"
+                result += f"  Total Duration: {route['total_duration']} seconds ({route['total_duration'] / 60:.1f} minutes)\n"
+                result += f"  Total Distance: {route.get('total_distance', 'N/A')} meters\n"
+                fare = route["alt_fare_price"]
+                result += f"  Fare (Adult/Cash/Cashless/Concession): RM{fare['adult']}/RM{fare['cash']}/RM{fare['cashless']}/RM{fare['consession']}\n"
+                
+                result += "  Legs:\n"
+                for leg_idx, leg in enumerate(route["legs"], 1):
+                    leg_type = leg["type"]
+                    result += f"    Leg {leg_idx} ({leg_type.capitalize()}):\n"
+                    result += f"      Duration: {leg['duration']} seconds\n"
+                    result += f"      Distance: {leg.get('distance', 'N/A')} meters\n"
+                    if leg_type == "transit":
+                        rd = leg["route_details"]
+                        result += f"      Route: {rd['route_long_name']} ({rd.get('route_short_name', '')})\n"
+                        result += f"      Headsign: {rd.get('headsign', 'N/A')}\n"  # Handle missing headsign
+                        result += f"      Departure: {leg['estimated_departure_time']}\n"
+                        result += f"      Arrival: {leg['estimated_end_arrival_time']}\n"
+                        result += "      Stops:\n"
+                        for stop in leg["steps"]:
+                            result += f"        - {stop['stop_name']} (ID: {stop['stop_id']})\n"
+                    elif leg_type == "pedestrain":  # Note: API uses 'pedestrain' typo
+                        result += "      Walking distance.\n"
+                
+                result += "\n"
+
+            return result
+
+        except json.JSONDecodeError as e:
+            logger.error(f"JSON decode error: {str(e)}")
+            return "Error: Invalid JSON response from API"
+        except Exception as e:
+            logger.error(f"Unexpected error: {str(e)}")
+            return f"Error: Unexpected issue occurred - {str(e)}"
+
+    except ValueError as e:
+        logger.error(f"Value error: {str(e)}")
+        return str(e)
 
 # Resources - provide all stations info
 @mcp.resource("https://jp.mapit.myrapid.com.my/endpoint/geoservice/stations")
